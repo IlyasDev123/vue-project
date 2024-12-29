@@ -1,0 +1,121 @@
+.main__register--form{
+    .login__form-container{
+        form{
+            margin: 0 auto;
+            .full__nameHolder{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                @media(max-width: 640px){
+                    flex-direction: column;
+                }
+                .w__50{
+                    flex: 0 0 calc(50% - 7px);
+                }   
+            }
+            .filelabel {
+                width: 100%;
+                border: 2px dashed #E8E9EC;
+                border-radius: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+                transition: border 300ms ease;
+                cursor: pointer;
+                text-align: center;
+                margin: 0;
+                padding: 25px;
+                i {
+                    display: block;
+                    font-size: 30px;
+                    padding-bottom: 5px;
+                    color: grey;
+                    transition: 200ms color;
+                }
+                .title {
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                    letter-spacing: -0.01em;
+                    color: var(--dodger-blue-bg);
+                    opacity: 0.6;
+                    margin: 5px 0;
+                }
+                .sub_title{
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 20px;
+                    letter-spacing: -0.01em;
+                    color: var(--hit-grey-color);
+                }
+                &:hover {
+                    border-color: var(--dodger-blue-color);
+                    i {
+                        color: var(--dodger-blue-color);
+                    }
+                }
+            }
+            #FileInput {
+                display: none;
+            }
+            .check__holder{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                input{
+                    width: 19px;
+                    height: 18px;
+                    border: 1px solid #E8E9EC;
+                    border-radius: 5px;
+                    flex: 0 0 5%;
+                    margin: 0;
+                    opacity: 0.5;
+                }
+                input:checked{
+                    opacity: 1;
+                }
+                label{
+                    flex: 0 0 93%;
+                    padding-left: 3px;
+                    margin-bottom: 0;
+                    p{
+                        font-family: 'Roboto';
+                        letter-spacing: -0.01em;
+                        color: var(--hit-grey-color);
+                        a{
+                            color: var(--dodger-blue-bg);
+                        }
+                    }
+                }
+            }            
+        }
+    }
+    .login__form-container{
+        max-width: 505px;
+        width: 100%;
+    }
+    .register__small--container{
+        max-width: 1100px;
+        width: 100%;
+    }
+}
+.red__small{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: rgba(231, 92, 42, 0.89);
+    margin-top: 10px;
+}
+.google__login{
+    img{
+        width: 100%;
+        max-width: 100%;
+    }
+}

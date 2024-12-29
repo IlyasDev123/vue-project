@@ -1,0 +1,119 @@
+.selct__industry{
+    &.select__role .role__container form{
+        max-width: 100%;
+    }
+    h1{
+        font-family: 'Bellota Text';
+        font-weight: 700;
+    }
+    .select__industryFormWrapper{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 13%;
+            bottom: -10px;
+            width: 100px;
+            height: 80px;
+            background-image: url('../../assets/images/talent-images/paper__arow.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            @media(max-width: 768px){
+                left: 0;
+            }
+            @media(max-width: 640px){
+                width: 40px;
+                height: 30px;
+            }          
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            right: 13%;
+            top: -10px;
+            width: 140px;
+            height: 245px;
+            background-image: url('../../assets/images/talent-images/rocket.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            @media(max-width: 1024px){
+                right: 4%;
+            }  
+            @media(max-width: 640px){
+                width: 20%;
+                height: 85px;
+                right: 0;
+            }          
+        }
+    }
+    .indutry__holder{
+        overflow-y: auto;
+        max-height: 450px;
+        position: relative;
+        & fieldset:not(:last-child){
+            margin-bottom: 35px;
+            @media(max-width: 1024px){
+                margin-bottom: 20px;
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        input{
+            opacity: 0;
+            position: absolute;
+            transition: all 0.4s ease;
+            &:checked + label{
+                -webkit-text-stroke: none;
+                color: var(--gunmetal-color);
+                opacity: 1;
+            }
+        }
+        label{
+            font-family: 'Roboto';
+            font-weight: 800;
+            font-size: 72px;
+            line-height: 84px;
+            display: flex;
+            align-items: center;
+            opacity: 0.3;
+            -webkit-text-stroke: 1px #000000;
+            color: transparent;
+            justify-content: center;
+            cursor: pointer;
+            @media(max-width: 1024px){
+                font-size: 30px;
+                line-height: 30px;
+            }
+            @media(max-width: 640px){
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+.progreess__bar--talent{
+    .progreess__barTitles_holder {
+        .bar__title{
+            &.completed{
+                svg:nth-child(1){
+                    display: none;
+                }
+                color: #A9ADC2;
+                svg path:nth-child(1){
+                    fill: #578BEF;
+                }
+                svg path:nth-child(2){
+                    fill: #fff;
+                }
+            }
+        }
+    }   
+    .blue_progress{
+        background-color: #578BEF;
+        height: 100%;
+        width: 0;
+    }
+} 

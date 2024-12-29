@@ -1,0 +1,8 @@
+.select__role.selct__industry.select__SpecificIndustry.selected__BigFont.HobbiesSelect{
+    .indutry__holder{
+        max-width: 650px;
+        @media(max-width: 640px){
+            max-width: 200px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.selected__BigFont.select__role.selct__industry.select__SpecificIndustry{
+    .indutry__holder{
+        label{
+            font-size: 25px;
+            transition: all 0.4s ease;
+            line-height: 40px;
+            @media(max-width: 640px){
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+        input:checked + label{
+            font-size: 36px;
+            line-height: 60px;
+            @media(max-width: 640px){
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+    }
+}

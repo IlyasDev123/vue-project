@@ -1,0 +1,44 @@
+:root{
+    --black-color:#000000;
+    --white-color:#FFFFFF;
+
+    // Color
+    --dark-blue-color:#263246;
+    --storm-blue-color:#61758A;
+    --timber-green-color:#1C2A3A;
+    --davy-gray-color:#445668;
+    --smokey-grey-color:#6B6B6B;
+    --pirate-gold-color:#BB8800;
+    --gunmetal-color:#2D3748;
+    --charcoal-grey-color:#374151;
+    --hit-grey-color:#AAAFB5;
+
+    --clear-blue-color:#1F78F0;
+    --catalina-blue:#1E2D7B;
+    --dodger-blue-color:#4294FF;
+
+    --algal-fuel: #22cc74;
+
+
+    // Background Color
+    --titanium-yellow-bg:rgba(255, 233, 33, 0.38);
+    --quill-grey-bg:#D9D9D9;
+    --dodger-blue-bg:#578BFF;
+
+    // Gradient Background
+    --main-bg:linear-gradient(
+        180deg,
+        rgba(231, 144, 54, 0.129) 0%,
+        rgba(231, 92, 42, 0.168) 24.98%,
+        rgba(182, 57, 41, 0.117) 51%,
+        rgba(85, 53, 187, 0.138) 75.99%,
+        rgba(203, 88, 162, 0.12) 100.97%,
+        rgba(136, 74, 181, 0.132) 126.99%,
+        rgba(32, 48, 208, 0.138) 153.01%,
+        rgba(100, 193, 237, 0.144) 176.95%,
+        rgba(91, 189, 205, 0.159) 199.85%),
+        #FFFFFF;
+
+    --white-bg:#FFFFFF;
+
+}

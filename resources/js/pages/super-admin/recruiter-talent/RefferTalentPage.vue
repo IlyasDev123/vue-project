@@ -1,0 +1,51 @@
+<template>
+    <div class="reffer__members-box">
+        <div class="avatar__upload m__auto">
+            <div class="avatar__preview">
+                <div id="imagePreview" style="background-image: url('../../assets/img/cp-logo.png');"></div>
+            </div>
+        </div>
+        <h3>Albert Michaels</h3>
+        <span>Chirrrp</span>
+
+        <div class="search__box">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#B1BBCD"/>
+            </svg>                                        
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="refer__post">
+
+        <CardBlock />
+        <CardBlock />
+        <CardBlock />
+        <CardBlock />
+        <CardBlock />
+        
+        <div class="refer__post-btn">
+            <router-link :to="{name:'DetailEmployerPage'}" class="refer__post-btn-back">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.56635 5.58328L5.69535 8.71228L4.87052 9.53711L0.333355 4.99994L4.87052 0.462776L5.69536 1.28761L2.56635 4.41661L9.66669 4.41661L9.66669 5.58328L2.56635 5.58328Z" fill="#304254"/>
+                </svg>                                            
+                <span>Go Back</span>
+            </router-link>
+        </div>
+
+    </div>
+</template>
+
+<script>
+import CardBlock from '@/components/CardBlock.vue';
+
+export default {
+    components:{
+        CardBlock
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>

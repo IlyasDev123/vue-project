@@ -1,0 +1,37 @@
+.d__flex{
+    display: flex;
+    flex-wrap: wrap;
+
+    &-h-start{
+        justify-content: flex-start;
+    }
+    &-h-center{
+        justify-content: center;
+    }
+    &-h-end{
+        justify-content: flex-end;
+    }
+    &-h-around{
+        justify-content: space-around;
+    }
+    &-h-between{
+        justify-content: space-between;
+    }
+
+    &-v-start{
+        align-items: flex-start;
+    }
+    &-v-center{
+        align-items: center;
+    }
+    &-v-end{
+        align-items: flex-end;
+    }
+
+    &-d-col{
+        flex-direction: column;
+    }
+    &-d-row{
+        flex-direction: row;
+    }
+}

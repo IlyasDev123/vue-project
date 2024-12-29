@@ -1,0 +1,277 @@
+@use "../utils/mixins" as *;
+
+.main__screen{
+    height: 100vh;
+    padding-top: 44px;
+}
+.full__height{
+    height: 100%;
+}
+
+.main__content {
+    width: calc(100% - 242px);
+    padding-left: 20px;
+    height: 100%;
+    
+    &-box{
+        background-color: var(--white-color);
+        border-radius: 10px;
+        margin-top: 26px;
+        padding: 25px;
+        overflow-y: auto;
+        height: calc(100% - 76px);
+        margin-bottom: 20px;
+
+        .all__members{
+            margin-top: 20px;
+        }
+        
+        h3{
+            color: #304254;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 20px;
+            margin: 0;
+        }
+
+        .filter__box{
+            position: relative;
+
+            .filter__btn{
+                cursor: pointer;
+            }
+            .filter__dropdown{
+                position: absolute;
+                width: 230px;
+                right: 20px;
+                top: 20px;
+                background: #FFFFFF;
+                border: 1px solid #BEC6D8;
+                box-shadow: 0px 2.25556px 27.0667px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 15px;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 999;
+
+                &.visible{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &-item{
+                    margin: 10px 0;
+
+                    &-radio{
+                        display: flex;
+                        align-items: center;
+
+                        input[type="radio"]{
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 10px;
+                        }
+                        label{
+                            font-family: 'Roboto';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 123.19%;
+                            letter-spacing: -0.173678px;
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+.member__table{
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+        text-align: left;
+        color: var(--storm-blue-color);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+    td{
+        font-family: 'Roboto', sans-serif;
+        color: var(--black-color);
+        padding: 15px 0;
+        font-size: 14px;
+    }
+
+    .member__name{
+        padding-left: 10px;
+    }
+    .member__name h5{
+        margin: 0;
+        font-family: 'Inter';
+        font-weight: 500;
+        color: var(--timber-green-color);
+        font-size: 12px;
+    }
+    .member__name h4{
+        margin: 0;
+        font-family: 'Inter';
+        font-weight: 400;
+        color: var(--davy-gray-color);
+    }
+    tbody tr{
+        padding: 10px 0;
+    }
+    tbody tr{
+        border-bottom: 1px solid #E1E8F0;
+    }
+    .member__status {
+        padding: 10px 20px;
+        border-radius: 32px;
+        text-align: center;
+        max-width: max-content;
+    }
+    .member__status span{
+        font-weight: 600;
+        font-family: 'Inter';
+        font-size: 14px;
+    }
+    .premium__member{
+        background-color: var(--titanium-yellow-bg);
+    }
+    .premium__member span{
+        color: var(--pirate-gold-color);        
+    }
+    .normal__member{
+        background-color: var(--quill-grey-bg);
+    }
+    .normal__member span{
+        color: var(--smokey-grey-color);
+    }
+
+    .premium__user {
+        position: relative;
+    }
+    
+    .premium__user:before {
+        content: "";
+        position: absolute;
+        left: 16px;
+        width: 22px;
+        height: 12px;
+        background-size: contain;
+        background-image: url(../../assets/img/crown.svg);
+        background-repeat: no-repeat;
+        top: -15px;
+    }  
+    .member__delete{
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+    }
+    tbody tr:hover{
+        background-color: #F0F5F9;
+        cursor: pointer;
+    }
+    tbody tr:hover button.member__delete{
+        visibility: visible;
+        opacity: 1;
+    }
+    .member__info{
+        padding-left: 10px;
+
+        .member__img img{
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+.talent__member--table{
+
+
+    & .member__status{
+        margin: auto;
+    }
+
+    & .active__member{
+        background-color: #E8F7EE;
+
+        & span{
+            color: #16AD4D;
+        }
+    }
+    & .pending__member{
+        background-color: #FFF1E7;
+
+        & span{
+            color: #F77307;
+        }
+    }
+    & .deactived__member{
+        background-color: rgba(255, 140, 124, 0.54);
+
+        & span{
+            color: #FF460C;
+        }
+    }
+}
+
+
+.add__new {
+    background-color: transparent;
+    border: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    
+    span {
+        font-family: 'Inter';
+        padding-left: 10px;
+        color: rgba(233, 73, 16, 0.86);
+        font-weight: 500;
+    }
+}
+
+.m__auto{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+// Media Query
+@include media-max($iPad){
+    .main__content{
+        width: 100%;
+        padding-left: 0;
+
+        &-box{
+            height: auto;
+
+            .table__box {
+                overflow: auto;
+            }
+
+            .member__table{
+                overflow-y: auto;
+                width: 900px;
+
+                .member__delete{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

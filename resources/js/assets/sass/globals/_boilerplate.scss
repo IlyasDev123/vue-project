@@ -1,0 +1,63 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--main-bg);
+    min-height: 100vh;
+}
+main{
+    height: 100%;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+fieldset{
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
+input{
+     max-width: 100%;
+     width: 100%;
+     outline: none;
+}
+img{
+    max-width: 100%;
+}
+
+
+*::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: linear-gradient(270deg, #3D70E0 0%, #C6A7FE 100%);
+}

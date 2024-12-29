@@ -1,0 +1,25 @@
+.almost__Done{
+    h1{
+        margin: 0;
+        min-height: calc(100vh - 310px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media(max-width: 1024px){
+            min-height: calc(100vh - 214px);
+        }
+        @media(max-width: 640px){
+            padding: 0 40px;
+            min-height: calc(100vh - 290px);
+        }
+
+    }
+    &.select__role .role__container .role__btn a{
+        top: 43%;
+        transform: translateY(-43%);
+        @media(max-width: 1024px){
+            top: 47%;
+            transform: translateY(-47%);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.selct__industry.select__SpecificIndustry{
+    .indutry__holder{
+        max-width: 466px;
+        margin: 0 auto;
+        @media(max-width: 640px){
+            max-width: 220px;
+        }
+        fieldset:not(:last-child){
+            margin-bottom: 5px;
+        }
+        label{
+            font-size: 33px;
+            line-height: 165%;
+            letter-spacing: 0.02em;
+            opacity: 0.88;
+            @media(max-width: 768px){
+                font-size: 20px;
+                line-height: 29px;
+            }
+            @media(max-width: 640px){
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+        input:checked + label{
+            border-bottom: 1px solid #000;
+        }
+    }
+}

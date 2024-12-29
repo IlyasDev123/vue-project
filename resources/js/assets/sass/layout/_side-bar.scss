@@ -1,0 +1,129 @@
+@use '../utils/mixins' as *;
+
+.side__bar{
+    background-color: var(--white-color);
+    width: 242px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px 10px 0px 0px;
+
+    .side__bar-cross {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 20px;
+    }
+    .side__bar-cross svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    &-content,
+    &-logout{
+        width: 100%;
+
+    }
+    &-logo,
+    &-logout{
+        text-align: center;
+    }
+    &-menu{
+        margin-top: 20px;
+    }
+
+    &-item a{
+        display: inline-block;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 0px 50px 50px 0px;
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        transition: 0.5s all;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        color: var(--dark-blue-color);
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+    }   
+    &-item a span{
+        padding-left: 10px;
+    }
+    &-items a:before,
+    &-item a.active:before{
+        content: '';
+        background-image: linear-gradient(270deg, #3D70E0 0%, #C6A7FE 100%);
+        border-radius: 0px 50px 50px 0px;
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        transition: 0.5s all;
+    }
+    &-item a:hover:before,
+    &-item a.active:before{
+        box-shadow: 0px 4px 6px -4px rgb(58 53 65 / 10%), 0px 6px 10px -4px rgb(58 53 65 / 8%), 0px 4px 8px -4px rgb(58 53 65 / 16%);
+        width: 100%;
+    }
+    &-item a:hover,
+    &-item a.active{
+        color: var(--white-color);
+    }
+    &-item a:hover svg path,
+    &-item a.active svg path{
+        fill: var(--white-color);
+    }
+    &-item a:hover img,
+    &-item a.active img{
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(150%) contrast(102%);
+    }
+
+    .logout__btn {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        text-transform: uppercase;
+
+        span{
+            margin-left: 5px;
+        }
+    }
+}
+
+// Media Query
+@include media-max($iPad){
+    .side__bar{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        z-index: 99;
+        filter: drop-shadow(0px 9px 53px rgba(0, 0, 0, 0.16));
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s all linear;
+
+        &.visible{
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+        }
+
+        &-menu{
+            padding-right: 20px;
+        }
+
+        .side__bar-cross{
+            display: flex;
+        }
+    }
+}

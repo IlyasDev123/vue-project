@@ -1,0 +1,22 @@
+// Large Screens
+$largeScreen: 2000px;
+
+// laptop to ipad
+$laptop: 1440px;
+$oddDesktopResponsive: 1300px; //used only once in the style.
+$desktop: 1280px;
+
+// IPad
+$tablets: 1024px; // for a generel horizontal tab devices.
+$iPad: 991px; // specifically old fixed iPad screens.
+
+// mobile
+$mobile: 767px; // standard breakpoint for mobile.
+$smallMobile: 470px; // for small screen mobile like Apple 5SE.
+
+
+@mixin media-max($width) {
+    @media (max-width:$width) {
+        @content;
+    }
+}

@@ -1,0 +1,45 @@
+@use '../utils/functionality' as *;
+
+h1{
+    font-size: betterClamp(26,40);
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+}
+h2{
+    font-size: betterClamp(24,32);
+    line-height: 1.2;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+
+p{
+    font-size: 14px;
+    margin: 0;
+    line-height: 18px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+a, a:visited , a:active{
+    text-decoration: none;
+}
+label{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+::placeholder{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    // color: var();
+}
+input{
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+}

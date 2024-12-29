@@ -1,0 +1,79 @@
+.get__chirrrp--IIN{
+
+    &.select__role{
+        .role__container{
+            h2{
+                margin: 70px 0 25px;
+            }
+        }
+    }
+}
+.progreess__bar--talent{
+    max-width: 618px;
+    width: 100%;
+    margin: 0 auto;
+    .progress__barLIne{
+        height: 2px;
+        background-color: #E0E0E7;
+        max-width: 89%;
+        width: 100%;
+        margin: 0 auto;
+        @media(max-width: 500px){
+            max-width: 80%;
+        }
+    }
+    .progreess__barTitles_holder {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        margin: -10px auto 70px;
+        .bar__title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #A9ADC2;
+            flex-direction: column;
+            &.active{
+                color: #1F2B40;
+                svg path:nth-child(1){
+                    fill: var(--white-color);
+                }
+                svg path:nth-child(2){
+                    fill: #578BEF;
+                }
+            }
+        }
+    }   
+    
+}
+.big__blutBtn{
+    border: 1px solid var(--dodger-blue-bg);
+    background: var(--dodger-blue-bg);
+    padding: 14px 78px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--white-color);
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.4s ease;
+    @media(max-width: 640px){
+        padding: 14px 24px;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.big__blutBtn:hover{
+    background: none;
+    color: var(--dodger-blue-bg);
+}
+.text__center{
+    text-align: center;
+}
